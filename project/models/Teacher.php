@@ -7,13 +7,10 @@
  */
 
 /**
- * Description of Student
+ * Description of Teacher
  *
  * @author Me
  */
-class Student {
+class Teacher {
     //put your code here
-    public function test(){
-        
-    }
 }
