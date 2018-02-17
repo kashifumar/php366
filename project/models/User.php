@@ -637,6 +637,9 @@ class User {
         
     }
 
+    public function display() {
+        
+    }
 }
 
 ?>
