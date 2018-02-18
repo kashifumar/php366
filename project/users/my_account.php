@@ -7,8 +7,12 @@ require_once '../views/middle_left.php';
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
 <div id="form-container">
 <?php
-$obj_user->profile();
+//$user_id = $_GET['user_id'] ?? 0;
 //$obj_user = new User();
+//$obj_user->id = $user_id;
+
+$obj_user->profile();
+
 ?>
     <div id="heading-row">MY Account</div>
 

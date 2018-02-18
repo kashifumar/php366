@@ -12,11 +12,11 @@ class Product {
         
     }
 
-    public static function get_products($count = 0, $offset = -1, $type = "all", $brand = NULL) {
-        $obj_db = self::get_db_conn();
+    public static function get_products($offset = -1, $count = 0, $type = "all", $order = "asc", $brand = "all") {
+        $obj_db = self::get_obj_db();
         
         $condition_brand = "";
-        if(!is_null($brand)) {
+        if($brand != "all") {
             $query_brand = "select id from brands "
                     . " where name = '$brand' ";
             $result_brand = $obj_db->query($query_brand);
@@ -32,7 +32,7 @@ class Product {
         
         $query = "select * from products $condition_brand ";
 
-        $types = array("all", "new", "top");
+        $types = ["all", "new", "top", "price"];
 
         if (!in_array($type, $types)) {
             $type = "all";
@@ -44,6 +44,11 @@ class Product {
                 break;
             case "new":
                 $query .= " order by id desc ";
+                break;
+            case "price":
+                $orders = ['asc', 'desc'];
+                $order = in_array($order, $orders) ? $order : "asc";
+                $query .= " order by unit_price $order ";
                 break;
         }
 
@@ -64,12 +69,12 @@ class Product {
         return $products;
     }
 
-    public static function pagination($item_per_page = 6, $brand = NULL) {
+    public static function pagination($item_per_page = 6, $brand = "all") {
 
-        $obj_db = self::get_db_conn();
+        $obj_db = self::get_obj_db();
 
         $condition_brand = "";
-        if(!is_null($brand)) {
+        if($brand != "all") {
             $query_brand = "select id from brands "
                     . " where name = '$brand' ";
             $result_brand = $obj_db->query($query_brand);
@@ -85,7 +90,8 @@ class Product {
 
         //total_students = 11
         //max_number_of_students_per_group = 3
-        $query = "select count(*) 'count' from products $condition_brand";
+//        $query = "select count(*) 'count' from products $condition_brand";
+        $query = "select count(*) 'count' from products";
 
         $result = $obj_db->query($query);
         $data = $result->fetch_object();
@@ -93,7 +99,7 @@ class Product {
 
         //Total Groups = 4
         $total_pages = ceil($total_products / $item_per_page);
-        $page_nums = array();
+        $page_nums = [];
 
         /*
 
@@ -111,6 +117,7 @@ class Product {
 //        echo("<pre>");
 //        print_r($page_nums);
 //        echo("</pre>");
+//        die;
         return $page_nums;
     }
 

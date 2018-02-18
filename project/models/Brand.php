@@ -4,7 +4,7 @@ class Brand  {
         use DBTrait;
         
     public static function get_brands(){
-        $obj_db = self::get_db_conn();
+        $obj_db = self::get_obj_db();
         $query = "select * from brands ";
          
         $result = $obj_db->query($query);

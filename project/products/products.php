@@ -1,11 +1,9 @@
 <?php
-require_once '../models/Cart.php';
+//require_once '../models/Cart.php';
 require_once '../models/User.php';
 require_once '../models/Brand.php';
 require_once '../models/Product.php';
 require_once '../views/header.php';
-//require_once '../views/header_banner.php';
-require_once '../views/slider.php';
 require_once '../views/middle_left.php';
 ?>
 
@@ -18,11 +16,12 @@ try {
 //        $new_products = Product::get_products(3, 0, "new");
 //
     
-    $offset = isset($_GET['start']) ? $_GET['start'] : 0;
-    $count = isset($_GET['count']) ? $_GET['count'] : ITEM_PER_PAGE;
+//    $offset = isset($_GET['offset']) ? $_GET['offset'] : 0;
+    $offset = $_GET['offset'] ?? 0;
+    $count = $_GET['count'] ?? ITEM_PER_PAGE;
     $type = isset($_GET['type']) ? $_GET['type'] : "all";
-    $brand = isset($_GET['brand']) ? $_GET['brand'] : NULL;
-    $products = Product::get_products($count, $offset, $type, $brand);
+    $brand = isset($_GET['brand']) ? $_GET['brand'] : "all";
+    $products = Product::get_products($offset, $count, $type, $order, $brand);
     foreach ($products as $p) {
         echo("<div class='product'>
             <div class='product-image'>
@@ -43,8 +42,8 @@ try {
     echo("<div style='clear:both;'></div>");
     $page_nums = Product::pagination(ITEM_PER_PAGE, $brand);
     echo("<div id='pages'>");
-    foreach($page_nums as $pNo=>$start){
-        echo("<a href='" . BASE_URL . "products/products.php?start=$start&type=$type&brand=$brand'>$pNo</a> - ");
+    foreach($page_nums as $pNo=>$offset){
+        echo("<a href='" . BASE_URL . "products/products.php?offset=$offset&type=$type&order=$order&brand=$brand'>$pNo</a> - ");
     }
     echo("</div>");
 } catch (Exception $ex) {
