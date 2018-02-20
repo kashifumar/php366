@@ -1,0 +1,35 @@
+https://getcomposer.org/
+set command line php path
+xampp/php/php.exe
+wamp/php/php.exe
+
+https://git-scm.com/download/win
+
+
+only first time
+git clone https://github.com/kashifumar/php366/
+after every lecture
+git pull
+
+create an account on github or bitbucket
+after login, create a new repository
+get the repository link from teh green button on right side saying clone or download
+get the https link
+git clone your_link
+
+
+git config --global user.email "email@example.com"
+git config --global user.name "Your Name"
+
+git status
+git add *
+git commit -m "Your Message"
+git push
+
+
+
+
+
+    If you are currently in insert or append mode, press Esc .
+    Press : (colon). The cursor should reappear at the lower left corner of the screen beside a colon prompt.
+    Enter the following: q!

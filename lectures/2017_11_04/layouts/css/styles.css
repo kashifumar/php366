@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+#full-page{
+	height:1000px;
+	width:900px;
+	margin:auto;
+	background-color:#AC9D9D;
+}
+
+#header{
+	height:150px;
+	background-color:red;
+}
+
+#main-body{
+	height:700px;
+	background-color:green;
+}
+
+#main-body-top{
+	height:200px;
+	background-color:pink;
+}
+
+#main-body-bottom{
+	height:500px;
+	background-color:orange;
+}
+
+#footer{
+	height:150px;
+	background-color:blue;
+}
+
+#footer-top{
+	height:100px;
+	background-color:lightblue;
+}
+
+#footer-bottom{
+	height:50px;
+	background-color:lightgreen;
+}
+
+
+

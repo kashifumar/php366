@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	position:relative;	
+}
+
+ul, ol{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+
+#full-page{
+	height:800px;
+	width:766px;
+	margin:auto;
+	background-color:#AC9D9D;
+}
+
+#header{
+	height:94px;
+	/*z-index:10;/**/
+	background-color:red;
+}
+
+#logo{
+	width:219px;
+	/*height:200px;/**/
+	height:94px;
+	float:left;
+	/*z-index:10;/**/
+	background-color:#f3a418;
+}
+
+#logo > img{
+	margin-left:12px;
+	margin-top:8px;
+}
+
+#top-bar{
+	width:547px;
+	/*height:200px;/**/
+	height:100%;
+		float:left;
+		/*margin-left:-100px;
+	z-index:2;/**/
+	/*background-color:lime;/**/
+	background-image:url(../images/top-bar-bg.png);
+}
+
+#main-body{
+	height:579px;
+	margin-bottom:2px;
+	/*z-index:2;/**/
+	background-color:green;
+}
+
+#main-body-top{
+	height:194px;
+	margin-bottom:1px;
+	background-color:pink;
+}
+
+#main-nav{
+	width:219px;
+	height:100%;
+		float:left;
+	/*background-color:lightblue;/**/
+	border-left:1pxx solid white;
+	background-image:url(../images/left-menu-bg.png);
+}
+
+#main-nav > ul{
+	margin-left:26px;
+	margin-top:24px;
+	font-family:Myriad Pro;
+	font-weight:bold;
+	font-size:12px;
+}
+
+#main-nav > ul > li{
+	text-transform:uppercase;
+	height:28px;
+	width:126px;
+	line-height:28px;
+	padding-left:36px;
+	background-image:url(../images/left-bullet.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	border-bottom:1px dotted #a1a1a1;
+	background-color:lime;
+}
+
+#main-nav > ul > li > a{
+		color:#000000;
+		text-decoration:none;
+}
+
+#banner-section{
+	width:547px;
+	height:100%;
+		float:left;
+	background-color:lightgreen;
+}
+
+#banner-1{
+	width:353px;
+	margin-left:2px;
+	height:100%;
+	float:left;
+	background-color:pink;
+}
+
+#banner-2{
+	width:192px;
+	height:100%;
+	float:left;
+	background-color:yellow;
+}
+
+
+#main-body-bottom{
+	height:384px;
+	background-color:orange;
+}
+
+#footer{
+	height:135px;
+	background-color:blue;
+}
+
+#footer-top{
+	height:100px;
+	background-color:lightblue;
+}
+
+#footer-bottom{
+	height:50px;
+	background-color:lightgreen;
+}
+
+
+

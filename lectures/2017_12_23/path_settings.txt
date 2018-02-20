@@ -1,0 +1,10 @@
+Right CLick Project in Netbeans
+Select Properties
+Sources
+Source FOlder
+
+Run COnfiguration
+Project URL
+
+Source FOlder : E:\me\dev\xampp\htdocs\	evs\php366\project
+Project URL :   http://localhost/evs/php366/project/

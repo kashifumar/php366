@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(e){
+
+	//$(".box").hide();
+
+	$("#btn1").click(function(e) {
+//        $(".box").hide();
+        //$(".box").show();
+		//$(".box").hide(2000);
+		/*
+		$(".box").hide(2000, function(){
+			alert("HIdden");
+		});
+		*/
+		//$(".box").show(2000);
+		//$(".box").toggle(2000);
+		
+		//$(".box").slideUp(2000);
+		//$(".box").slideDown(2000);
+		//$(".box").slideToggle(2000);
+		
+		//$(".box").fadeOut(2000);
+		//$(".box").fadeIn(2000);
+		//$(".box").fadeToggle(2000);
+		//$(".box").fadeTo(2000, 0.5);
+		
+		//$(".box").css("border-radius", "50px");
+		//$(".box").addClass("round");
+		//$(".box").text("round");
+		//$(".box").text("<b>round</b>");
+		//$(".box").html("<b>round</b>");
+		//$(".box").append("- <b>round</b>");
+		$(".box").prepend("- <b>round</b>");
+    });
+});
+</script>
+
+<style media="all" type="text/css">
+.box{
+	height:100px;
+	margin-bottom:10px;
+	background-color:red;
+	color:yellow;
+	font-size:30px;
+}
+
+.round{
+	border-radius:50px;
+}
+
+</style>
+</head>
+
+<body>
+<input type="button" id="btn1" value="Click Here">
+
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+
+
+</body>
+</html>

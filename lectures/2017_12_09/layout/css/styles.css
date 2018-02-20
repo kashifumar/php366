@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+
+#full-page{
+	height:1400px;
+	background-color:#AFA3A4;
+}
+
+header{
+	margin-bottom:15px;
+	height:212px;
+	background-color:pink;
+}
+
+header > nav{
+	height:71px;
+	background-color:yellow;
+}
+
+div#header-top{
+	margin-bottom:13px;
+	height:128px;
+	background-color:lime;
+}
+
+div#logo{
+	padding-bottom:3px;
+}
+
+div#logo > img{
+	margin-left:3px;
+	margin-top:19px;
+}
+
+#top-menu-1{
+	margin-top:13px;
+	font-family:"Myriad Pro";
+	/*font-size:16px;/**/
+	font-size:100%;
+}
+
+#top-menu-1 li{
+	padding:0;
+	margin-left:29px;
+}
+#top-menu-1 a
+{
+	color:#434343;
+	text-decoration:none;
+}
+
+
+div#main-body{
+	height:100px;
+	background-color:lime;
+}
+
+
+/*
+li:nth-of-type(1),
+li:nth-of-type(2)
+*/
+.box1
+{
+	width:;
+}
+
+/*
+li:nth-of-type(3),
+li:nth-of-type(4)
+*/
+.box2
+{
+	width:;
+}
+
+/*li:nth-of-type(2n+1)/**/
+.color1
+{
+	background-color:#05aecc;
+}
+
+/*li:nth-of-type(2n)/**/
+.color2
+{
+	background-color:#f0626e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

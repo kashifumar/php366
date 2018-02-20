@@ -1,0 +1,4 @@
+https://github.com/stefangabos/Zebra_Datepicker
+https://silviomoreto.github.io/bootstrap-select/
+http://getbootstrap.com/
+http://www.jqueryui.com/

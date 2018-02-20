@@ -1,0 +1,36 @@
+fireshot
+
+Menu Bar
+View->Clear Slices
+View->Clear Guides
+Image->Image Size
+View->Rulers
+Edit->Preferences->Units & Rulers
+		Units
+			Rulers: pixels
+			Type: pixels
+
+Toolbar
+Slice
+Eyedropper
+
+Zoom
+Alt+Mouse Wheel
+Ctrl +/-
+
+
+Step Backward
+Ctrl+Alt+Z
+
+
+
+
+
+
+
+
+
+
+
+
+

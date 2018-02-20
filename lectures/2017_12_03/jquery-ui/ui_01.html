@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="external/jquery/jquery.js"></script>
+  <script src="jquery-ui.min.js"></script>
+  <script>
+$(document).ready(function(e) {
+    $( ".message" ).dialog({
+      modal: true,
+	  autoOpen: false,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+    
+
+$(".btn").click(function(e) {
+
+	var title = $(this).val();    
+	/*	
+	alert(val);
+	*/
+	
+	//var message = $(this).attr("data-message");
+	//var message = $(this).prop("data-message");
+	//$(this).prop("disabled", true);
+	//$(this).siblings().prop("disabled", false);
+	var message = $(this).data("message");
+	//alert(message);
+
+	var output = "<p>" + message + "</p>";
+	//alert(output);
+	$(".message").html(output);	
+	$( ".message" ).dialog("option", "hide", { effect: "explode", duration: 1000 } );
+	$( ".message" ).dialog("option", "title", title );
+	$( ".message" ).dialog("open");
+});
+	
+});
+  
+  </script>
+</head>
+
+<body>
+<input type="button" class="btn" value="HTML" data-message="This is HTML Button">
+<input type="button" class="btn" value="CSS" data-message="This is CSS Button">
+<input type="button" class="btn" value="JQ" data-message="This is JQ Button">
+
+
+<div class="message" title="Download complete">
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

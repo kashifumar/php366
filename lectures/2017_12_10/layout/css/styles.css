@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: url('../fonts/LATO-REGULAR.ttf')  format('truetype');
+}
+
+body{
+	font-family:'Lato Regular';
+	font-size:16px;
+}
+
+.container{
+	padding:0;
+}
+#full-page{
+	height:1400px;
+	background-color:#AFA3A4;
+}
+
+a, a:hover{
+	color:white;
+	text-decoration:none;
+}
+
+header{
+	margin-bottom:15px;
+	/*height:212px;/**/
+	/*background-color:pink;/**/
+}
+
+div#header-top{
+	margin-bottom:13px;
+	/*height:128px;/**/
+	/*background-color:lime;/**/
+}
+
+div#logo{
+	padding-bottom:3px;
+}
+
+div#logo > img{
+	margin-left:3px;
+	margin-top:19px;
+}
+
+#top-menu-1{
+	margin-top:13px;
+	/*font-family:"Myriad Pro";/**/
+	/*font-size:16px;/**/
+	font-size:100%;
+}
+
+@media (min-width: 768px) {
+	#top-menu-1{
+		float:right;
+	}
+}
+
+#top-menu-1 li{
+	padding:0;
+	margin-left:25px;
+}
+
+@media (min-width: 992px) {
+	#top-menu-1 li{
+		margin-left:29px;
+	}
+}
+
+#top-menu-2 ul{
+	margin-bottom:0;
+}
+
+#top-menu-2 li{
+	background-color:#f6f6f6;
+	text-align:center;
+	padding:33px 0;
+}
+
+#top-menu-2 li:nth-of-type(1),
+#top-menu-2 li:nth-of-type(2){
+	width:116px;
+}
+
+#top-menu-2 li:nth-of-type(3),
+#top-menu-2 li:nth-of-type(4){
+	width:142px;
+}
+
+#top-menu-2 li:nth-of-type(1),
+#top-menu-2 li:nth-of-type(3){
+	background-color:#05aecc;
+}
+
+#top-menu-2 li:nth-of-type(2),
+#top-menu-2 li:nth-of-type(4){
+	background-color:#f0626e;
+}
+
+
+header > nav{
+	/*height:71px;/**/
+	text-align:center;
+	background-color:#05aecc !important;
+}
+
+header > nav > ul{
+	margin-bottom:0;
+}
+
+header > nav > ul > li{
+	padding:0 !important;
+}
+
+header > nav > ul > li > a{
+	padding:24px 25px !important;
+	display:block;
+	height:100%;
+}
+header > nav > ul > li > a:hover, 
+header > nav > ul > li > a:focus {
+	background-color:white;
+	color:#ef5966;
+}
+
+div#main-body{
+	background-color:lime;
+}
+/*
+
+@media (max-width: 990px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+*/
