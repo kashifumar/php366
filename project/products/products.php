@@ -1,5 +1,5 @@
 <?php
-//require_once '../models/Cart.php';
+require_once '../models/Cart.php';
 require_once '../models/User.php';
 require_once '../models/Brand.php';
 require_once '../models/Product.php';
@@ -12,8 +12,8 @@ require_once '../views/middle_left.php';
 <?php
 try {
     
-//        $top_products = Product::get_products(3, 0, "top");
-//        $new_products = Product::get_products(3, 0, "new");
+//        $top_products = Product::get_products(0, 3,"top");
+//        $new_products = Product::get_products(0, 3, "new");
 //
     
 //    $offset = isset($_GET['offset']) ? $_GET['offset'] : 0;

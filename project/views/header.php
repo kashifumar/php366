@@ -20,13 +20,13 @@ if (isset($_SESSION['obj_user'])) {
 /**
  * 2018_01_27
  */
-//
-//if (isset($_SESSION['obj_cart'])) {
-//    $obj_cart = unserialize($_SESSION['obj_cart']);
-//} else {
-//    $obj_cart = new Cart();
-//}
-//
+
+if (isset($_SESSION['obj_cart'])) {
+    $obj_cart = unserialize($_SESSION['obj_cart']);
+} else {
+    $obj_cart = new Cart();
+}
+
 $current = $_SERVER['PHP_SELF'];
 //echo($current);
 $public_pages = array(
@@ -94,7 +94,7 @@ if ($obj_user->id > 0 && in_array($current, $public_pages)) {
                     <div id="logo" class="full-height"><a href=""></a></div>
                     <div id="user-data" class="full-height">
                         <div>Welcome </div>
-                        <div>You have 0 items in your cart. Total $0</div>
+                        <div>You have <?php echo($obj_cart->count);?> items in your cart. Total $<?php echo($obj_cart->total);?></div>
                     </div>
                     <div id="top-header-right" class="full-height">
                         <div id="top-header-right-top">
