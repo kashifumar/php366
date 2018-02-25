@@ -9,6 +9,9 @@ if (isset($_SESSION['obj_cart'])) {
     $obj_cart = new Cart();
 }
 
+
+//if($_SERVER['REQUEST_METHOD'] == "POST")
+
 if (isset($_POST['action'])) {
 
     switch ($_POST['action']) {
@@ -27,9 +30,29 @@ if (isset($_POST['action'])) {
             $obj_cart->add_to_cart($item);
 
             break;
+        
+        case "update_cart":
+            $qtys = $_POST['qtys'] ?? [];
+            $obj_cart->update_cart($qtys);
+            break;
+        
     }
 }
 
+else if (isset($_GET['action'])) {
+
+    switch ($_GET['action']) {
+        case "remove_item":
+            $item = new Item($_GET['product_id']);
+            $obj_cart->remove_item($item);
+
+            break;
+      case "empty_cart":
+            $obj_cart->empty_cart();
+
+            break;
+    }
+}
 
 $_SESSION['obj_cart'] = serialize($obj_cart);
 

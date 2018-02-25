@@ -14,7 +14,8 @@ require_once '../views/middle_left.php';
 //echo("</pre>");
 //die;
 if($obj_cart->items){
-    echo("<table class='table-bordered col-xs-12 table-striped table-hover'>"
+    echo("<form action='" . BASE_URL . "products/process/process_cart.php' method='post'>"
+            . "<table class='table-bordered col-xs-12 table-striped table-hover'>"
             . "<tr>"
             . "<th>X</th>"
             . "<th>Item Name</th>"
@@ -30,7 +31,7 @@ if($obj_cart->items){
             . "<td>$item->item_name</td>"
             . "<td><a href='" . BASE_URL . "products/product_detail.php?product_id=$item->item_id' target='_blank'>View Detail</a></td>"
             . "<td>$item->unit_price</td>"
-            . "<td>$item->quantity</td>"
+            . "<td><input type='text' value='$item->quantity' name='qtys[$item->item_id]'></td>"
             . "<td>$item->total</td>"
             . "</tr>");
                 
@@ -38,13 +39,16 @@ if($obj_cart->items){
 
     echo("<tr>"
             . "<th>Shop More</th>"
-            . "<th>Empty Cart</th>"
-            . "<th>Update Cart</th>"
-            . "<th>Check Out</th>"
+            . "<th><a href='" . BASE_URL . "products/process/process_cart.php?action=empty_cart'>Empty Cart</a></th>"
+            . "<th>"
+            . "<input type='hidden' name='action' value='update_cart'>"
+            . "<input type='submit' value='Update Cart'></th>"
+            . "<th><a href='" . BASE_URL . "products/checkout.php'>Check Out</a></th>"
             . "<th>TOTAL</th>"
             . "<th>$obj_cart->total</th>"
             . "</tr>"
-            . "</table>");
+            . "</table>"
+            . "</form>");
 }
 else{
     echo("<h1>Your Cart Is Empty</h1>");

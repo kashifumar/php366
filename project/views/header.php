@@ -36,7 +36,7 @@ $public_pages = array(
 $restricted_pages = array(
     '/' . BASE_FOLDER . 'users/my_account.php',
     '/' . BASE_FOLDER . 'users/edit_account.php',
-    '/' . BASE_FOLDER . 'products/check_out.php',
+    '/' . BASE_FOLDER . 'products/checkout.php',
 );
 
 if ($obj_user->id == 0 && in_array($current, $restricted_pages)) {
@@ -144,7 +144,7 @@ else{
 }
                         ?>
                         <li><a href="<?php echo(BASE_URL); ?>products/shopping_cart.php">Shopping Cart</a></li>
-                        <li><a href="<?php echo(BASE_URL); ?>products/check_out.php">Check Out</a></li>
+                        <li><a href="<?php echo(BASE_URL); ?>products/checkout.php">Check Out</a></li>
                         <li><a href="<?php echo(BASE_URL); ?>users/my_account.php">My Account</a></li>
                     </ul>
                 </div>
