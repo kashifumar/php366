@@ -1,0 +1,4 @@
+https://github.com/kashifumar/php366
+
+md5(crypt(rand(), "ss"))
+crypt(rand(), "ss")
